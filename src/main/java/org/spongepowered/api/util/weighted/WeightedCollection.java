@@ -43,6 +43,45 @@ import java.util.Random;
  */
 public class WeightedCollection<T extends WeightedObject<?>> implements Collection<T> {
 
+    /**
+     * Returns a new {@link WeightedCollection} filled with the given weighted
+     * objects.
+     * 
+     * @param objects The weighted objects to add to the new collection.
+     * @param <T> The weighted object type
+     * @return A new weighted collection containing the given objects
+     */
+    public static <T extends WeightedObject<?>> WeightedCollection<T> of(T... objects) {
+        WeightedCollection<T> collection = new WeightedCollection<T>();
+        for (int i = 0; i < objects.length; i++) {
+            if (objects[i] == null) {
+                continue;
+            }
+            collection.add(objects[i]);
+        }
+        return collection;
+    }
+
+    /**
+     * Returns a new {@link WeightedCollection} filled with the weighted objects
+     * within the given collection.
+     * 
+     * @param objects The a collection of weighted objects to fill the new
+     *        collection with
+     * @param <T> The weighted object type
+     * @return A new weighted collection containing the given objects
+     */
+    public static <T extends WeightedObject<?>> WeightedCollection<T> copyOf(Collection<T> objects) {
+        WeightedCollection<T> collection = new WeightedCollection<T>();
+        for (T obj : objects) {
+            if (obj == null) {
+                continue;
+            }
+            collection.add(obj);
+        }
+        return collection;
+    }
+
     private final List<T> objects;
     private int totalWeight = 0;
 
@@ -166,13 +205,8 @@ public class WeightedCollection<T extends WeightedObject<?>> implements Collecti
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hashCode(this.objects, this.totalWeight);
-    }
-
-    @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
+        if (obj == this) {
             return true;
         }
         if (!(obj instanceof WeightedCollection)) {
@@ -187,7 +221,13 @@ public class WeightedCollection<T extends WeightedObject<?>> implements Collecti
                 return false;
             }
         }
-        return !(element.hasNext() || otherElement.hasNext());
+        WeightedCollection<?> wc = (WeightedCollection<?>) obj;
+        return this.objects.equals(wc.objects);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(this.objects);
     }
 
     /**

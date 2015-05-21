@@ -24,6 +24,7 @@
  */
 package org.spongepowered.api.world.gen.populator;
 
+import org.spongepowered.api.util.VariableAmount;
 import org.spongepowered.api.world.gen.Populator;
 
 /**
@@ -38,7 +39,7 @@ public interface Reeds extends Populator {
      * 
      * @return The amount to spawn
      */
-    int getReedsPerChunk();
+    VariableAmount getReedsPerChunk();
 
     /**
      * Sets the number of reeds to attempt to spawn per chunk, must be greater
@@ -46,7 +47,21 @@ public interface Reeds extends Populator {
      * 
      * @param count The new amount to spawn
      */
-    void setReedsPerChunk(int count);
+    void setReedsPerChunk(VariableAmount count);
+
+    /**
+     * Gets the height of the reeds to generate.
+     * 
+     * @return The reed height
+     */
+    VariableAmount getReedHeight();
+
+    /**
+     * Sets the height of the reeds to generate.
+     * 
+     * @param height The new reed height
+     */
+    void setReedHeight(VariableAmount height);
 
     /**
      * A builder for constructing {@link Reeds} populators.
@@ -60,7 +75,15 @@ public interface Reeds extends Populator {
          * @param count The new amount to spawn
          * @return This builder, for chaining
          */
-        Builder perChunk(int count);
+        Builder perChunk(VariableAmount count);
+
+        /**
+         * Sets the height of the reeds to generate.
+         * 
+         * @param height The new reed height
+         * @return This builder, for chaining
+         */
+        Builder reedHeight(VariableAmount height);
 
         /**
          * Resets this builder to the default values.
@@ -75,7 +98,7 @@ public interface Reeds extends Populator {
          * 
          * @return A new instance of the populator
          * @throws IllegalStateException If there are any settings left unset
-         *             which do not have default values
+         *         which do not have default values
          */
         Reeds build() throws IllegalStateException;
 

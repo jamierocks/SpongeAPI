@@ -24,6 +24,7 @@
  */
 package org.spongepowered.api.world.gen.populator;
 
+import org.spongepowered.api.util.VariableAmount;
 import org.spongepowered.api.world.gen.Populator;
 
 /**
@@ -37,7 +38,7 @@ public interface Glowstone extends Populator {
      * 
      * @return The number to spawn
      */
-    int getClustersPerChunk();
+    VariableAmount getClustersPerChunk();
 
     /**
      * Sets the number of clusters to attempt to spawn per chunk, must be
@@ -45,7 +46,7 @@ public interface Glowstone extends Populator {
      * 
      * @param count The new amount to spawn
      */
-    void setClustersPerChunk(int count);
+    void setClustersPerChunk(VariableAmount count);
 
     /**
      * Gets the amount of glowstone to attempt to spawn per cluster, must be
@@ -53,7 +54,7 @@ public interface Glowstone extends Populator {
      * 
      * @return The number to spawn
      */
-    int getAttemptsPerCluster();
+    VariableAmount getAttemptsPerCluster();
 
     /**
      * Sets the amount of glowstone to attempt to spawn per cluster, must be
@@ -61,7 +62,21 @@ public interface Glowstone extends Populator {
      * 
      * @param attempts The new amount to spawn
      */
-    void setAttemptsPerCluster(int attempts);
+    void setAttemptsPerCluster(VariableAmount attempts);
+
+    /**
+     * Gets the height range of the glowstone cluster.
+     * 
+     * @return The height range
+     */
+    VariableAmount getHeightRange();
+
+    /**
+     * Sets the height range of the glowstone cluster.
+     * 
+     * @param height The new height range
+     */
+    void setHeightRange(VariableAmount height);
 
     /**
      * A builder for constructing {@link Glowstone} populators.
@@ -75,7 +90,7 @@ public interface Glowstone extends Populator {
          * @param count The new amount to spawn
          * @return This builder, for chaining
          */
-        Builder perChunk(int count);
+        Builder perChunk(VariableAmount count);
 
         /**
          * Sets the amount of glowstone to attempt to spawn per cluster, must be
@@ -84,7 +99,15 @@ public interface Glowstone extends Populator {
          * @param attempts The new amount to spawn
          * @return This builder, for chaining
          */
-        Builder blocksPerCluster(int attempts);
+        Builder blocksPerCluster(VariableAmount attempts);
+
+        /**
+         * Sets the height range of the glowstone cluster.
+         * 
+         * @param height The new height range
+         * @return This builder, for chaining
+         */
+        Builder heightRange(VariableAmount height);
 
         /**
          * Resets this builder to the default values.
@@ -99,7 +122,7 @@ public interface Glowstone extends Populator {
          * 
          * @return A new instance of the populator
          * @throws IllegalStateException If there are any settings left unset
-         *             which do not have default values
+         *         which do not have default values
          */
         Glowstone build() throws IllegalStateException;
 
