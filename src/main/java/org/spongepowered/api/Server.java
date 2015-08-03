@@ -29,6 +29,7 @@ import com.google.common.base.Optional;
 import org.spongepowered.api.entity.Entity;
 import org.spongepowered.api.entity.player.Player;
 import org.spongepowered.api.network.ChannelRegistrar;
+import org.spongepowered.api.service.error.Reportable;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.sink.MessageSink;
 import org.spongepowered.api.util.command.source.ConsoleSource;
@@ -45,7 +46,7 @@ import java.util.UUID;
 /**
  * Represents a typical Minecraft Server.
  */
-public interface Server extends ChannelRegistrar {
+public interface Server extends ChannelRegistrar, Reportable {
 
     /**
      * Gets the {@link Player}s currently online.

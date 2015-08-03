@@ -123,6 +123,7 @@ import org.spongepowered.api.event.message.MessageEvent;
 import org.spongepowered.api.event.rcon.RconLoginEvent;
 import org.spongepowered.api.event.rcon.RconQuitEvent;
 import org.spongepowered.api.event.server.StatusPingEvent;
+import org.spongepowered.api.event.service.error.ErrorReportEvent;
 import org.spongepowered.api.event.state.StateEvent;
 import org.spongepowered.api.event.statistic.AchievementEvent;
 import org.spongepowered.api.event.statistic.StatisticChangeEvent;
@@ -143,6 +144,7 @@ import org.spongepowered.api.event.world.WorldUnloadEvent;
 import org.spongepowered.api.item.inventory.Inventory;
 import org.spongepowered.api.item.inventory.ItemStack;
 import org.spongepowered.api.item.inventory.type.TileEntityInventory;
+import org.spongepowered.api.service.error.ErrorReport;
 import org.spongepowered.api.statistic.Statistic;
 import org.spongepowered.api.statistic.achievement.Achievement;
 import org.spongepowered.api.status.StatusClient;
@@ -1939,5 +1941,17 @@ public final class SpongeEventFactory {
         values.put("game", game);
         values.put("source", source);
         return createEvent(RconQuitEvent.class, values);
+    }
+
+    /**
+     * Creates a new {@link ErrorReportEvent}.
+     *
+     * @param report The report being dispatched
+     * @return A new instance of the event
+     */
+    public static ErrorReportEvent createErrorReport(ErrorReport report) {
+        Map<String, Object> values = Maps.newHashMap();
+        values.put("errorReport", report);
+        return createEvent(ErrorReportEvent.class, values);
     }
 }
