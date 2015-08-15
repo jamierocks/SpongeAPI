@@ -24,6 +24,8 @@
  */
 package org.spongepowered.api.network;
 
+import org.spongepowered.api.plugin.Plugin;
+
 import java.util.List;
 
 /**
@@ -41,7 +43,80 @@ public interface ChannelRegistrar {
      * @throws ChannelRegistrationException The channel name is too long
      * @throws ChannelRegistrationException The channel name is reserved
      */
-    void registerChannel(Object plugin, ChannelListener listener, String channel) throws ChannelRegistrationException;
+    void registerIncomingChannel(Object plugin, ChannelListener listener, String channel) throws ChannelRegistrationException;
+
+    /**
+     * Registers the given channel for outgoing messages to the plugin.
+     *
+     * @param plugin
+     * @param channel
+     * @throws ChannelRegistrationException
+     */
+    void registerOutgoingChannel(Object plugin, String channel) throws ChannelRegistrationException;
+
+    boolean isIncomingRegistrationValid(Object plugin, ChannelListener listener, String channel);
+
+    boolean isOutgoingRegistrationValid(Object plugin, String channel);
+
+    /**
+     * Gets the list of registered incoming channels.
+     *
+     * <p>Channel registration is a global registration, all clients
+     * will automatically be registered with the given channels on the
+     * server and vice versa.</p>
+     *
+     * @return A copy of the list of channels
+     */
+    List<String> getIncomingchannels();
+
+    /**
+     * Gets the list of registered outgoing channels.
+     *
+     * <p>Channel registration is a global registration, all clients
+     * will automatically be registered with the given channels on the
+     * server and vice versa.</p>
+     *
+     * @return A copy of the list of channels
+     */
+    List<String> getOutgoingChannels();
+
+    /**
+     * Gets the list of registered incoming channels for the specified
+     * {@link Plugin}.
+     *
+     * <p>Channel registration is a global registration, all clients
+     * will automatically be registered with the given channels on the
+     * server and vice versa.</p>
+     *
+     * @return A copy of the list of channels
+     */
+    List<String> getIncomingChannelsForPlugin(Object plugin);
+
+    /**
+     * Gets the list of registered outgoing channels for the specified
+     * {@link Plugin}.
+     *
+     * <p>Channel registration is a global registration, all clients
+     * will automatically be registered with the given channels on the
+     * server and vice versa.</p>
+     *
+     * @return A copy of the list of channels
+     */
+    List<String> getOutgoingChannelsForPlugin(Object plugin);
+
+    void unregisterIncomingChannels(Object plugin);
+
+    void unregisterIncomingChannel(Object plugin, String channel);
+
+    void unregisterIncomingChannel(Object plugin, ChannelListener listener, String channel);
+
+    void unregisterOutgoingChannels(Object plugin);
+
+    void unregisterOutgoingChannel(Object plugin, String channel);
+
+    void unregisterAllChannels(Object plugin);
+
+    boolean isChannelReserved(String channel);
 
     /**
      * Gets the list of registered channels.

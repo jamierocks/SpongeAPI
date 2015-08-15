@@ -36,14 +36,15 @@ import java.util.List;
 public interface BulkItemResultEvent extends InventoryEvent {
 
     /**
-     * Retrieves the results for this event.
+     * Retrieves a copy of the results for this event.
      *
-     * @return The results
+     * @return A copy of the results for this event
      */
     List<ItemStack> getResults();
 
     /**
-     * Sets the results for this event.
+     * Sets the results for this event. Note that the provided {@link List} of
+     * {@link ItemStack}s are copied defensively to avoid
      *
      * @param results The new result
      */
