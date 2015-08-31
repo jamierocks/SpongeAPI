@@ -24,6 +24,7 @@
  */
 package org.spongepowered.api.data;
 
+import java.util.Optional;
 import org.spongepowered.api.data.manipulator.DataManipulator;
 import org.spongepowered.api.data.property.PropertyHolder;
 import org.spongepowered.api.data.value.mutable.CompositeValueStore;
