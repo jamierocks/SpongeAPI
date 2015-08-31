@@ -24,7 +24,6 @@
  */
 package org.spongepowered.api.block;
 
-import java.util.Optional;
 import org.spongepowered.api.CatalogType;
 import org.spongepowered.api.block.trait.BlockTrait;
 import org.spongepowered.api.data.DataHolder;
@@ -34,6 +33,7 @@ import org.spongepowered.api.text.translation.Translatable;
 import org.spongepowered.api.util.annotation.CatalogedBy;
 
 import java.util.Collection;
+import java.util.Optional;
 
 /**
  * Describes a base type of block.
@@ -93,7 +93,7 @@ public interface BlockType extends CatalogType, Translatable, PropertyHolder {
     /**
      * Attempts to retrieve the {@link BlockTrait} instance associated with
      * this {@link BlockState}s {@link BlockType} by string id. If there is no
-     * {@link BlockTrait} available, {@link Optional#absent()} is returned.
+     * {@link BlockTrait} available, {@link Optional#empty()} )} is returned.
      *
      * @param blockTrait The block trait id
      * @return The block trait, if available

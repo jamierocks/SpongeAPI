@@ -29,6 +29,9 @@ import org.spongepowered.api.data.property.PropertyHolder;
 import org.spongepowered.api.data.value.mutable.CompositeValueStore;
 import org.spongepowered.api.service.persistence.InvalidDataException;
 
+import java.util.Collection;
+import java.util.Optional;
+
 /**
  * A data holder object allows the access of additional data on the object
  * that is not simply expressed by its basic type.

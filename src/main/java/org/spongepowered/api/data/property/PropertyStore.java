@@ -25,11 +25,11 @@
 package org.spongepowered.api.data.property;
 
 
-import java.util.Optional;
 import org.spongepowered.api.data.DataHolder;
 import org.spongepowered.api.data.Property;
 import org.spongepowered.api.world.Location;
 import org.spongepowered.api.world.World;
+import java.util.Optional;
 
 /**
  * Represents a handler for a {@link PropertyHolder} such that if a
