@@ -59,20 +59,20 @@ public interface Achievement extends CatalogType, Translatable {
      * @return An immutable collection of all children this achievement has
      */
     Collection<Achievement> getChildren();
-    
+
     /**
      * Gets the {@link Statistic} which this achievement is backed by if it is available.
-     * 
+     *
      * @return The source statistic, if available
      */
     Optional<Statistic> getSourceStatistic();
-    
+
     /**
      * If this achievement is backed by a statistic (eg. if
      * {@link #getSourceStatistic()} is not absent) then this will return the
      * target value which must be reached for this achievement to be awarded to
      * a player.
-     * 
+     *
      * @return The target value, if available
      */
     Optional<Long> getStatisticTargetValue();
