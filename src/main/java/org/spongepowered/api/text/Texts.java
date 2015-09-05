@@ -199,7 +199,7 @@ public final class Texts {
 
         return builder.build();
     }
-    
+
     /**
      * Creates a {@link TextBuilder} with empty text.
      *
