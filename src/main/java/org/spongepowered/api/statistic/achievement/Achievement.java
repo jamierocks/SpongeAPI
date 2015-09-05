@@ -27,7 +27,6 @@ package org.spongepowered.api.statistic.achievement;
 import com.google.common.base.Optional;
 import org.spongepowered.api.CatalogType;
 import org.spongepowered.api.statistic.Statistic;
-import org.spongepowered.api.text.TextRepresentable;
 import org.spongepowered.api.text.translation.Translatable;
 import org.spongepowered.api.text.translation.Translation;
 import org.spongepowered.api.util.annotation.CatalogedBy;
@@ -38,7 +37,7 @@ import java.util.Collection;
  * Represents an in-game achievement which may be earned by or given to players.
  */
 @CatalogedBy(Achievements.class)
-public interface Achievement extends CatalogType, Translatable, TextRepresentable {
+public interface Achievement extends CatalogType, Translatable {
 
     /**
      * Returns the description that describes this achievement.
