@@ -26,13 +26,14 @@ package org.spongepowered.api.event;
 
 import com.flowpowered.math.vector.Vector3d;
 import com.flowpowered.math.vector.Vector3i;
-import com.google.common.base.Function;
-import com.google.common.base.Optional;
 import com.google.common.collect.Maps;
 import java.net.InetSocketAddress;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.function.Function;
+
 import org.spongepowered.api.Game;
 import org.spongepowered.api.GameProfile;
 import org.spongepowered.api.MinecraftVersion;
@@ -209,7 +210,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.Event}.
-     * 
+     *
      * @return A new event
      */
     public static Event createEvent() {
@@ -221,7 +222,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.GameEvent}.
-     * 
+     *
      * @param game The game
      * @return A new game event
      */
@@ -235,7 +236,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.achievement.GrantAchievementEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalMessage The original message
@@ -261,7 +262,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.achievement.GrantAchievementEvent.TargetPlayer}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalMessage The original message
@@ -289,7 +290,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.FishingEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalFishHook The original fish hook
@@ -309,7 +310,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.FishingEvent.Finish}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalFishHook The original fish hook
@@ -329,7 +330,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.FishingEvent.Hook}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalFishHook The original fish hook
@@ -355,7 +356,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.FishingEvent.Start}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalFishHook The original fish hook
@@ -375,7 +376,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.FishingEvent.Stop}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalCaughtEntity The original caught entity
@@ -407,7 +408,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.InteractEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param interactionPoint The interaction point
@@ -425,7 +426,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.LightningEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @return A new lightning event
@@ -441,7 +442,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.LightningEvent.Post}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @return A new post lightning event
@@ -457,7 +458,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.LightningEvent.Pre}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @return A new pre lightning event
@@ -473,7 +474,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.LightningEvent.Strike}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param entities The entities
@@ -497,7 +498,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.MessageEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalMessage The original message
@@ -517,7 +518,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.SleepingEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param bed The bed
@@ -537,7 +538,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.SleepingEvent.Finish}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param bed The bed
@@ -557,7 +558,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.SleepingEvent.Post}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param bed The bed
@@ -579,7 +580,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.SleepingEvent.Pre}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param bed The bed
@@ -599,7 +600,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.SleepingEvent.Tick}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param bed The bed
@@ -619,7 +620,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.BreakBlockEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetWorld The target world
@@ -639,7 +640,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.ChangeBlockEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetWorld The target world
@@ -659,7 +660,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.CollideBlockEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetBlock The target block
@@ -681,7 +682,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.DecayBlockEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetWorld The target world
@@ -701,7 +702,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.GrowBlockEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetWorld The target world
@@ -721,7 +722,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.HarvestBlockEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalDropChance The original drop chance
@@ -753,7 +754,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.InteractBlockEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param interactionPoint The interaction point
@@ -774,8 +775,8 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.block.InteractBlockEvent.Primary}.
-     * 
+     * {@link org.spongepowered.api.event.block.InteractBlockEvent.Attack}.
+     *
      * @param game The game
      * @param cause The cause
      * @param interactionPoint The interaction point
@@ -795,7 +796,7 @@ public class SpongeEventFactory {
 
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
-     * Creates a new instance of
+     * Creates a new instance of*
      * {@link org.spongepowered.api.event.block.InteractBlockEvent.Secondary}.
      * 
      * @param game The game
@@ -819,7 +820,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.MoveBlockEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetWorld The target world
@@ -839,7 +840,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.NotifyNeighborBlockEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalRelatives The original relatives
@@ -859,7 +860,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.NotifyNeighborBlockEvent.Burn}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalRelatives The original relatives
@@ -879,7 +880,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.NotifyNeighborBlockEvent.Ignite}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalRelatives The original relatives
@@ -899,7 +900,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.NotifyNeighborBlockEvent.Power}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalRelatives The original relatives
@@ -919,7 +920,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.NotifyNeighborBlockEvent.Spread}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalRelatives The original relatives
@@ -941,7 +942,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.PlaceBlockEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetWorld The target world
@@ -961,7 +962,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.TargetBlockEvent}.
-     * 
+     *
      * @param game The game
      * @param targetBlock The target block
      * @return A new target block event
@@ -977,7 +978,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.TickBlockEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetBlock The target block
@@ -995,7 +996,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.BrewingEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param ingredient The ingredient
@@ -1015,7 +1016,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.BrewingEvent.Finish}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param brewedItemStacks The brewed item stacks
@@ -1037,7 +1038,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.BrewingEvent.Interrupt}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param brewedItemStacks The brewed item stacks
@@ -1059,7 +1060,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.BrewingEvent.Start}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param ingredient The ingredient
@@ -1083,7 +1084,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.BrewingEvent.Tick}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param ingredient The ingredient
@@ -1107,7 +1108,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.ChangeSignEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalText The original text
@@ -1129,7 +1130,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.SmeltEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param fuel The fuel
@@ -1149,7 +1150,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.SmeltEvent.ConsumeFuel}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param fuel The fuel
@@ -1173,7 +1174,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.SmeltEvent.Finish}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param fuel The fuel
@@ -1195,7 +1196,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.SmeltEvent.Interrupt}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param fuel The fuel
@@ -1217,7 +1218,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.SmeltEvent.Start}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param fuel The fuel
@@ -1241,7 +1242,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.SmeltEvent.Tick}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param fuel The fuel
@@ -1265,7 +1266,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.TargetTileEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param targetTile The target tile
      * @return A new target tile entity event
@@ -1281,7 +1282,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.command.MessageSinkEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalMessage The original message
@@ -1329,7 +1330,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.command.SendCommandEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param arguments The arguments
@@ -1351,7 +1352,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.command.TabCompleteCommandEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param arguments The arguments
@@ -1373,7 +1374,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.data.ChangeDataHolderEvent}.
-     * 
+     *
      * @param game The game
      * @param targetHolder The target holder
      * @return A new change data holder event
@@ -1389,7 +1390,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.data.ChangeDataHolderEvent.ValueChange}.
-     * 
+     *
      * @param game The game
      * @param endResult The end result
      * @param originalChanges The original changes
@@ -1409,7 +1410,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.AffectEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param entities The entities
@@ -1431,7 +1432,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.BreedEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param interactionPoint The interaction point
@@ -1451,7 +1452,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.BreedEntityEvent.Breed}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param interactionPoint The interaction point
@@ -1473,7 +1474,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.BreedEntityEvent.FindMate}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalResult The original result
@@ -1499,7 +1500,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityEquipmentEvent}.
-     * 
+     *
      * @param game The game
      * @param originalItemStack The original item stack
      * @param itemStack The item stack
@@ -1521,7 +1522,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityEquipmentEvent.TargetHuman}.
-     * 
+     *
      * @param game The game
      * @param originalItemStack The original item stack
      * @param itemStack The item stack
@@ -1543,7 +1544,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityEquipmentEvent.TargetLiving}.
-     * 
+     *
      * @param game The game
      * @param originalItemStack The original item stack
      * @param itemStack The item stack
@@ -1565,7 +1566,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityEquipmentEvent.TargetPlayer}.
-     * 
+     *
      * @param game The game
      * @param originalItemStack The original item stack
      * @param itemStack The item stack
@@ -1587,7 +1588,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityExperienceEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalExperience The original experience
@@ -1609,7 +1610,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityPotionEffectEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param currentEffects The current effects
@@ -1631,7 +1632,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityPotionEffectEvent.Expire}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param currentEffects The current effects
@@ -1653,7 +1654,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityPotionEffectEvent.Gain}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param currentEffects The current effects
@@ -1675,7 +1676,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityPotionEffectEvent.Remove}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param currentEffects The current effects
@@ -1697,7 +1698,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.CollideEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetEntity The target entity
@@ -1715,7 +1716,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ConstructEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetType The target type
@@ -1735,7 +1736,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ConstructEntityEvent.Post}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetEntity The target entity
@@ -1757,7 +1758,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ConstructEntityEvent.Pre}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetType The target type
@@ -1777,7 +1778,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DamageEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalFinalDamage The original final damage
@@ -1809,7 +1810,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DestructEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalMessage The original message
@@ -1861,7 +1862,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DismountEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetEntity The target entity
@@ -1879,7 +1880,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param fromTransform The from transform
      * @param toTransform The to transform
@@ -1899,7 +1900,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Move}.
-     * 
+     *
      * @param game The game
      * @param fromTransform The from transform
      * @param toTransform The to transform
@@ -1919,7 +1920,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Move.TargetHuman}.
-     * 
+     *
      * @param game The game
      * @param fromTransform The from transform
      * @param toTransform The to transform
@@ -1939,7 +1940,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Move.TargetLiving}.
-     * 
+     *
      * @param game The game
      * @param fromTransform The from transform
      * @param toTransform The to transform
@@ -1959,7 +1960,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Move.TargetPlayer}.
-     * 
+     *
      * @param game The game
      * @param fromTransform The from transform
      * @param toTransform The to transform
@@ -1979,7 +1980,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.TargetHuman}.
-     * 
+     *
      * @param game The game
      * @param fromTransform The from transform
      * @param toTransform The to transform
@@ -1999,7 +2000,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.TargetLiving}.
-     * 
+     *
      * @param game The game
      * @param fromTransform The from transform
      * @param toTransform The to transform
@@ -2019,7 +2020,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.TargetPlayer}.
-     * 
+     *
      * @param game The game
      * @param fromTransform The from transform
      * @param toTransform The to transform
@@ -2039,7 +2040,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Teleport}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param fromTransform The from transform
@@ -2065,7 +2066,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Teleport.TargetHuman}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param fromTransform The from transform
@@ -2091,7 +2092,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Teleport.TargetLiving}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param fromTransform The from transform
@@ -2117,7 +2118,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Teleport.TargetPlayer}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param fromTransform The from transform
@@ -2143,7 +2144,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ExpireEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetEntity The target entity
@@ -2161,7 +2162,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ExpireEntityEvent.TargetItem}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetEntity The target entity
@@ -2179,7 +2180,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.HarvestEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalExperience The original experience
@@ -2201,7 +2202,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.HarvestEntityEvent.TargetHuman}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalExperience The original experience
@@ -2223,7 +2224,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.HarvestEntityEvent.TargetLiving}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalExperience The original experience
@@ -2245,7 +2246,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.HarvestEntityEvent.TargetPlayer}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalExperience The original experience
@@ -2273,7 +2274,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.HealEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param modifiers The modifiers
@@ -2303,7 +2304,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.IgniteEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalFireTicks The original fire ticks
@@ -2325,7 +2326,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.InteractEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param interactionPoint The interaction point
@@ -2345,7 +2346,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.InteractEntityEvent.Attack}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param interactionPoint The interaction point
@@ -2409,7 +2410,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.LeashEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetEntity The target entity
@@ -2427,7 +2428,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.MountEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetEntity The target entity
@@ -2445,7 +2446,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.SpawnEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetEntity The target entity
@@ -2463,7 +2464,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.TameEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetEntity The target entity
@@ -2481,7 +2482,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.TargetEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param targetEntity The target entity
      * @return A new target entity event
@@ -2497,7 +2498,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.UnleashEntityEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetEntity The target entity
@@ -2515,7 +2516,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.item.AffectItemEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param entities The entities
@@ -2537,7 +2538,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.item.ItemMergeItemEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param itemToMerge The item to merge
@@ -2557,7 +2558,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.item.TargetItemEvent}.
-     * 
+     *
      * @param game The game
      * @param targetEntity The target entity
      * @return A new target item event
@@ -2573,7 +2574,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.TargetLivingEvent}.
-     * 
+     *
      * @param game The game
      * @param targetEntity The target entity
      * @return A new target living event
@@ -2589,7 +2590,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.ChangeGameModeEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalGameMode The original game mode
@@ -2609,7 +2610,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.ChangeGameModeEvent.TargetHuman}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalGameMode The original game mode
@@ -2631,7 +2632,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.ChangeGameModeEvent.TargetPlayer}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalGameMode The original game mode
@@ -2653,7 +2654,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.ChangeLevelEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalLevel The original level
@@ -2673,7 +2674,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.ChangeLevelEvent.TargetHuman}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalLevel The original level
@@ -2695,7 +2696,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.ChangeLevelEvent.TargetPlayer}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalLevel The original level
@@ -2717,7 +2718,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.TargetHumanEvent}.
-     * 
+     *
      * @param game The game
      * @param targetEntity The target entity
      * @return A new target human event
@@ -2733,7 +2734,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.player.KickPlayerEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalMessage The original message
@@ -2759,7 +2760,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.player.ResourcePackStatusEvent}.
-     * 
+     *
      * @param game The game
      * @param pack The pack
      * @param player The player
@@ -2779,7 +2780,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.player.RespawnPlayerEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param fromTransform The from transform
@@ -2803,7 +2804,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.player.TargetPlayerEvent}.
-     * 
+     *
      * @param game The game
      * @param targetEntity The target entity
      * @return A new target player event
@@ -2819,7 +2820,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.projectile.LaunchProjectileEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetEntity The target entity
@@ -2837,7 +2838,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.projectile.TargetProjectileEvent}.
-     * 
+     *
      * @param game The game
      * @param targetEntity The target entity
      * @return A new target projectile event
@@ -2853,7 +2854,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameAboutToStartServerEvent}.
-     * 
+     *
      * @param game The game
      * @return A new game about to start server event
      */
@@ -2867,7 +2868,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameConstructionEvent}.
-     * 
+     *
      * @param game The game
      * @return A new game construction event
      */
@@ -2881,7 +2882,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameInitializationEvent}.
-     * 
+     *
      * @param game The game
      * @return A new game initialization event
      */
@@ -2895,7 +2896,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameLoadCompleteEvent}.
-     * 
+     *
      * @param game The game
      * @return A new game load complete event
      */
@@ -2909,7 +2910,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GamePostInitializationEvent}.
-     * 
+     *
      * @param game The game
      * @return A new game post initialization event
      */
@@ -2923,7 +2924,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GamePreInitializationEvent}.
-     * 
+     *
      * @param game The game
      * @return A new game pre initialization event
      */
@@ -2937,7 +2938,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameStartedServerEvent}.
-     * 
+     *
      * @param game The game
      * @return A new game started server event
      */
@@ -2951,7 +2952,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameStartingServerEvent}.
-     * 
+     *
      * @param game The game
      * @return A new game starting server event
      */
@@ -2965,7 +2966,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameStateEvent}.
-     * 
+     *
      * @param game The game
      * @return A new game state event
      */
@@ -2979,7 +2980,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameStoppedServerEvent}.
-     * 
+     *
      * @param game The game
      * @return A new game stopped server event
      */
@@ -2993,7 +2994,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameStoppingServerEvent}.
-     * 
+     *
      * @param game The game
      * @return A new game stopping server event
      */
@@ -3007,7 +3008,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.AffectItemStackEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetInventory The target inventory
@@ -3027,7 +3028,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.CraftItemEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param recipe The recipe
@@ -3049,7 +3050,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.DropItemStackEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @return A new drop item stack event
@@ -3065,7 +3066,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.DropItemStackEvent.Drop}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param entities The entities
@@ -3087,7 +3088,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.DropItemStackEvent.Post}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @return A new post drop item stack event
@@ -3103,7 +3104,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.DropItemStackEvent.Pre}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param defaultDroppedItems The default dropped items
@@ -3123,7 +3124,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.InteractInventoryEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetInventory The target inventory
@@ -3141,7 +3142,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.InteractInventoryEvent.Click}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetInventory The target inventory
@@ -3159,7 +3160,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.InteractInventoryEvent.Close}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetInventory The target inventory
@@ -3177,7 +3178,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.InteractInventoryEvent.Drag}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetInventory The target inventory
@@ -3195,7 +3196,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.InteractInventoryEvent.Move}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetInventory The target inventory
@@ -3213,7 +3214,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.PickUpItemEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param entities The entities
@@ -3237,7 +3238,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.TargetContainerEvent}.
-     * 
+     *
      * @param game The game
      * @param targetContainer The target container
      * @return A new target container event
@@ -3253,7 +3254,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.TargetInventoryEvent}.
-     * 
+     *
      * @param game The game
      * @param targetInventory The target inventory
      * @return A new target inventory event
@@ -3269,7 +3270,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.UseItemStackEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalRemainingDuration The original remaining duration
@@ -3291,7 +3292,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.UseItemStackEvent.Finish}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalRemainingDuration The original remaining duration
@@ -3315,7 +3316,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.UseItemStackEvent.Start}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalRemainingDuration The original remaining duration
@@ -3337,7 +3338,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.UseItemStackEvent.Stop}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalRemainingDuration The original remaining duration
@@ -3359,7 +3360,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.UseItemStackEvent.Tick}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalRemainingDuration The original remaining duration
@@ -3381,7 +3382,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.BanIpEvent}.
-     * 
+     *
      * @param ban The ban
      * @return A new ban ip event
      */
@@ -3395,7 +3396,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.ClientConnectionEvent}.
-     * 
+     *
      * @param game The game
      * @return A new client connection event
      */
@@ -3409,7 +3410,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.ClientConnectionEvent.Auth}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalMessage The original message
@@ -3437,7 +3438,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.ClientConnectionEvent.Disconnect}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalMessage The original message
@@ -3463,7 +3464,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.ClientConnectionEvent.Join}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalMessage The original message
@@ -3493,7 +3494,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.ClientConnectionEvent.Login}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalMessage The original message
@@ -3521,7 +3522,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.PardonIpEvent}.
-     * 
+     *
      * @param ban The ban
      * @return A new pardon ip event
      */
@@ -3535,7 +3536,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.rcon.RconConnectionEvent}.
-     * 
+     *
      * @param source The source
      * @return A new rcon connection event
      */
@@ -3549,7 +3550,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.rcon.RconConnectionEvent.Connect}.
-     * 
+     *
      * @param source The source
      * @return A new connect rcon connection event
      */
@@ -3563,7 +3564,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.rcon.RconConnectionEvent.Disconnect}.
-     * 
+     *
      * @param source The source
      * @return A new disconnect rcon connection event
      */
@@ -3577,7 +3578,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.rcon.RconConnectionEvent.Login}.
-     * 
+     *
      * @param source The source
      * @return A new login rcon connection event
      */
@@ -3591,7 +3592,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.ClientPingServerEvent}.
-     * 
+     *
      * @param client The client
      * @param response The response
      * @return A new client ping server event
@@ -3607,7 +3608,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.ClientPingServerEvent.Response}.
-     * 
+     *
      * @param description The description
      * @param favicon The favicon
      * @param players The players
@@ -3627,7 +3628,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.ClientPingServerEvent.Response.Players}.
-     * 
+     *
      * @param profiles The profiles
      * @param max The max
      * @param online The online
@@ -3645,7 +3646,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.channel.RegisterChannelEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetChannel The target channel
@@ -3663,7 +3664,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.channel.TargetChannelEvent}.
-     * 
+     *
      * @param game The game
      * @param targetChannel The target channel
      * @return A new target channel event
@@ -3679,7 +3680,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.channel.UnRegisterChannelEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetChannel The target channel
@@ -3697,7 +3698,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.query.QueryServerEvent}.
-     * 
+     *
      * @return A new query server event
      */
     public static QueryServerEvent createQueryServerEvent() {
@@ -3709,7 +3710,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.query.QueryServerEvent.Basic}.
-     * 
+     *
      * @param address The address
      * @param gameType The game type
      * @param map The map
@@ -3737,7 +3738,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.query.QueryServerEvent.Full}.
-     * 
+     *
      * @param address The address
      * @param customValuesMap The custom values map
      * @param gameId The game id
@@ -3775,7 +3776,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.statistic.ChangeStatisticEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalValue The original value
@@ -3797,7 +3798,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.statistic.ChangeStatisticEvent.TargetPlayer}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalValue The original value
@@ -3821,7 +3822,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.user.BanUserEvent}.
-     * 
+     *
      * @param cause The cause
      * @param ban The ban
      * @param targetUser The target user
@@ -3839,7 +3840,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.user.BanUserEvent.TargetPlayer}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param ban The ban
@@ -3861,7 +3862,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.user.PardonUserEvent}.
-     * 
+     *
      * @param cause The cause
      * @param ban The ban
      * @param targetUser The target user
@@ -3879,7 +3880,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.user.PardonUserEvent.TargetPlayer}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param ban The ban
@@ -3901,7 +3902,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.user.TargetUserEvent}.
-     * 
+     *
      * @param targetUser The target user
      * @return A new target user event
      */
@@ -3915,7 +3916,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ChangeWorldGameRuleEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalValue The original value
@@ -3939,7 +3940,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ChangeWorldWeatherEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param originalDuration The original duration
@@ -3967,7 +3968,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ConstructPortalEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param portalLocation The portal location
@@ -3985,7 +3986,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ConstructWorldEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param worldCreationSettings The world creation settings
@@ -4005,7 +4006,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ExplosionEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param explosion The explosion
@@ -4025,7 +4026,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ExplosionEvent.Detonate}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param entities The entities
@@ -4051,7 +4052,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ExplosionEvent.Post}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param explosion The explosion
@@ -4071,7 +4072,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ExplosionEvent.Pre}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param explosion The explosion
@@ -4091,7 +4092,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.GenerateChunkEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetChunk The target chunk
@@ -4109,7 +4110,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.GenerateChunkEvent.Post}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetChunk The target chunk
@@ -4127,7 +4128,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.GenerateChunkEvent.Pre}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetChunk The target chunk
@@ -4145,7 +4146,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.LoadWorldEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetWorld The target world
@@ -4163,7 +4164,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.TargetWorldEvent}.
-     * 
+     *
      * @param game The game
      * @param targetWorld The target world
      * @return A new target world event
@@ -4179,7 +4180,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.UnloadWorldEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetWorld The target world
@@ -4197,7 +4198,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.ForcedChunkEvent}.
-     * 
+     *
      * @param game The game
      * @param chunkCoords The chunk coords
      * @param targetChunk The target chunk
@@ -4217,7 +4218,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.LoadChunkEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetChunk The target chunk
@@ -4235,7 +4236,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.PopulateChunkEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetChunk The target chunk
@@ -4253,7 +4254,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.PopulateChunkEvent.Populate}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetChunk The target chunk
@@ -4271,7 +4272,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.PopulateChunkEvent.Post}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetChunk The target chunk
@@ -4289,7 +4290,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.PopulateChunkEvent.Pre}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param pendingPopulators The pending populators
@@ -4309,7 +4310,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.TargetChunkEvent}.
-     * 
+     *
      * @param game The game
      * @param targetChunk The target chunk
      * @return A new target chunk event
@@ -4325,7 +4326,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.UnforcedChunkEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param chunkCoords The chunk coords
@@ -4345,7 +4346,7 @@ public class SpongeEventFactory {
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.UnloadChunkEvent}.
-     * 
+     *
      * @param game The game
      * @param cause The cause
      * @param targetChunk The target chunk
