@@ -30,6 +30,7 @@ import org.spongepowered.api.data.Property;
 import org.spongepowered.api.data.property.AbstractProperty;
 import org.spongepowered.api.potion.PotionEffect;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.annotation.Nullable;
