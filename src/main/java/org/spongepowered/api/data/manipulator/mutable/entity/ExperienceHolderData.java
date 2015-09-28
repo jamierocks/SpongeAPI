@@ -27,6 +27,8 @@ package org.spongepowered.api.data.manipulator.mutable.entity;
 import org.spongepowered.api.data.manipulator.DataManipulator;
 import org.spongepowered.api.data.manipulator.immutable.entity.ImmutableExperienceHolderData;
 import org.spongepowered.api.data.value.BoundedValue;
+import org.spongepowered.api.data.value.immutable.ImmutableBoundedValue;
+import org.spongepowered.api.data.value.mutable.MutableBoundedValue;
 import org.spongepowered.api.entity.living.Human;
 
 /**
@@ -44,7 +46,7 @@ public interface ExperienceHolderData extends DataManipulator<ExperienceHolderDa
      * @return The bounded value of experience since the beginning of the
      *     current level
      */
-    BoundedValue<Integer> experienceSinceLevel();
+    MutableBoundedValue<Integer> experienceSinceLevel();
 
     /**
      * Gets the {@link BoundedValue} for the amount of experience
@@ -52,9 +54,12 @@ public interface ExperienceHolderData extends DataManipulator<ExperienceHolderDa
      * This can be presumed to be the supposed "maximum" for the
      * {@link #experienceSinceLevel()} amount.
      *
+     * <p>Note that this value, while exposed, is not likely "settable",
+     * due to the nature of the experience calculations.</p>
+     *
      * @return The immutable bounded required experience between levels
      */
-    BoundedValue<Integer> getExperienceBetweenLevels();
+    ImmutableBoundedValue<Integer> getExperienceBetweenLevels();
 
     /**
      * Gets the {@link BoundedValue} for the current "level" of
@@ -64,13 +69,13 @@ public interface ExperienceHolderData extends DataManipulator<ExperienceHolderDa
      *
      * @return The current level according to the amount of total experience
      */
-    BoundedValue<Integer> level();
+    MutableBoundedValue<Integer> level();
 
     /**
      * Gets the total amount of experience stored.
      *
      * @return The value of total amount of experience
      */
-    BoundedValue<Integer> totalExperience();
+    MutableBoundedValue<Integer> totalExperience();
 
 }
