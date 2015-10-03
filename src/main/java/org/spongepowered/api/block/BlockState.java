@@ -24,7 +24,6 @@
  */
 package org.spongepowered.api.block;
 
-import com.google.common.base.Optional;
 import org.spongepowered.api.block.tileentity.TileEntity;
 import org.spongepowered.api.block.trait.BlockTrait;
 import org.spongepowered.api.data.ImmutableDataHolder;
@@ -39,6 +38,7 @@ import org.spongepowered.api.world.World;
 
 import java.util.Collection;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Represents a particular "state" that can exist at a {@link Location} with
@@ -85,7 +85,7 @@ public interface BlockState extends ImmutableDataHolder<BlockState>, DirectionRe
     /**
      * Gets the {@link Comparable} value for the specific {@link BlockTrait}
      * such that if the {@link BlockState} does not support the
-     * {@link BlockTrait}, {@link Optional#absent()} is returned.
+     * {@link BlockTrait}, {@link Optional#empty()} ()} is returned.
      *
      * @param blockTrait The block trait instance
      * @param <T> The generic type of block trait
@@ -96,7 +96,7 @@ public interface BlockState extends ImmutableDataHolder<BlockState>, DirectionRe
     /**
      * Attempts to retrieve the {@link BlockTrait} instance associated with
      * this {@link BlockState}s {@link BlockType} by string id. If there is no
-     * {@link BlockTrait} available, {@link Optional#absent()} is returned.
+     * {@link BlockTrait} available, {@link Optional#empty()} ()} is returned.
      *
      * @param blockTrait The block trait id
      * @return The block trait, if available

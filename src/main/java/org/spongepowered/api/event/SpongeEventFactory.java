@@ -26,13 +26,13 @@ package org.spongepowered.api.event;
 
 import com.flowpowered.math.vector.Vector3d;
 import com.flowpowered.math.vector.Vector3i;
-import com.google.common.base.Function;
-import com.google.common.base.Optional;
 import com.google.common.collect.Maps;
 import java.net.InetSocketAddress;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.function.Function;
 import org.spongepowered.api.Game;
 import org.spongepowered.api.GameProfile;
 import org.spongepowered.api.MinecraftVersion;
@@ -205,7 +205,7 @@ import org.spongepowered.api.world.storage.WorldProperties;
 import org.spongepowered.api.world.weather.Weather;
 
 public class SpongeEventFactory {
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.Event}.
@@ -217,7 +217,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(Event.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.GameEvent}.
@@ -231,7 +231,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GameEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.achievement.GrantAchievementEvent}.
@@ -257,7 +257,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GrantAchievementEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.achievement.GrantAchievementEvent.TargetPlayer}.
@@ -285,7 +285,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GrantAchievementEvent.TargetPlayer.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.FishingEvent}.
@@ -305,7 +305,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(FishingEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.FishingEvent.Finish}.
@@ -325,7 +325,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(FishingEvent.Finish.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.FishingEvent.Hook}.
@@ -351,7 +351,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(FishingEvent.Hook.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.FishingEvent.Start}.
@@ -371,7 +371,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(FishingEvent.Start.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.FishingEvent.Stop}.
@@ -403,7 +403,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(FishingEvent.Stop.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.InteractEvent}.
@@ -421,7 +421,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(InteractEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.LightningEvent}.
@@ -437,7 +437,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(LightningEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.LightningEvent.Post}.
@@ -453,7 +453,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(LightningEvent.Post.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.LightningEvent.Pre}.
@@ -469,7 +469,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(LightningEvent.Pre.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.LightningEvent.Strike}.
@@ -493,7 +493,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(LightningEvent.Strike.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.MessageEvent}.
@@ -513,7 +513,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(MessageEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.SleepingEvent}.
@@ -533,7 +533,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(SleepingEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.SleepingEvent.Finish}.
@@ -553,7 +553,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(SleepingEvent.Finish.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.SleepingEvent.Post}.
@@ -575,7 +575,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(SleepingEvent.Post.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.SleepingEvent.Pre}.
@@ -595,7 +595,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(SleepingEvent.Pre.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.action.SleepingEvent.Tick}.
@@ -615,7 +615,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(SleepingEvent.Tick.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.BreakBlockEvent}.
@@ -635,7 +635,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(BreakBlockEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.ChangeBlockEvent}.
@@ -655,7 +655,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeBlockEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.CollideBlockEvent}.
@@ -677,7 +677,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(CollideBlockEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.DecayBlockEvent}.
@@ -697,7 +697,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DecayBlockEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.GrowBlockEvent}.
@@ -717,7 +717,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GrowBlockEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.HarvestBlockEvent}.
@@ -749,7 +749,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(HarvestBlockEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.InteractBlockEvent}.
@@ -771,7 +771,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(InteractBlockEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.InteractBlockEvent.Primary}.
@@ -793,7 +793,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(InteractBlockEvent.Primary.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.InteractBlockEvent.Secondary}.
@@ -815,7 +815,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(InteractBlockEvent.Secondary.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.MoveBlockEvent}.
@@ -835,7 +835,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(MoveBlockEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.NotifyNeighborBlockEvent}.
@@ -855,7 +855,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(NotifyNeighborBlockEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.NotifyNeighborBlockEvent.Burn}.
@@ -875,7 +875,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(NotifyNeighborBlockEvent.Burn.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.NotifyNeighborBlockEvent.Ignite}.
@@ -895,7 +895,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(NotifyNeighborBlockEvent.Ignite.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.NotifyNeighborBlockEvent.Power}.
@@ -915,7 +915,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(NotifyNeighborBlockEvent.Power.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.NotifyNeighborBlockEvent.Spread}.
@@ -937,7 +937,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(NotifyNeighborBlockEvent.Spread.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.PlaceBlockEvent}.
@@ -957,7 +957,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(PlaceBlockEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.TargetBlockEvent}.
@@ -973,7 +973,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetBlockEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.TickBlockEvent}.
@@ -991,7 +991,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TickBlockEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.BrewingEvent}.
@@ -1011,7 +1011,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(BrewingEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.BrewingEvent.Finish}.
@@ -1033,7 +1033,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(BrewingEvent.Finish.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.BrewingEvent.Interrupt}.
@@ -1055,7 +1055,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(BrewingEvent.Interrupt.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.BrewingEvent.Start}.
@@ -1079,7 +1079,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(BrewingEvent.Start.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.BrewingEvent.Tick}.
@@ -1103,7 +1103,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(BrewingEvent.Tick.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.ChangeSignEvent}.
@@ -1125,7 +1125,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeSignEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.SmeltEvent}.
@@ -1145,7 +1145,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(SmeltEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.SmeltEvent.ConsumeFuel}.
@@ -1169,7 +1169,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(SmeltEvent.ConsumeFuel.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.SmeltEvent.Finish}.
@@ -1191,7 +1191,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(SmeltEvent.Finish.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.SmeltEvent.Interrupt}.
@@ -1213,7 +1213,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(SmeltEvent.Interrupt.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.SmeltEvent.Start}.
@@ -1237,7 +1237,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(SmeltEvent.Start.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.SmeltEvent.Tick}.
@@ -1261,7 +1261,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(SmeltEvent.Tick.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.block.tileentity.TargetTileEntityEvent}.
@@ -1277,7 +1277,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetTileEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.command.MessageSinkEvent}.
@@ -1301,7 +1301,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(MessageSinkEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.command.MessageSinkEvent.Chat}.
@@ -1325,7 +1325,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(MessageSinkEvent.Chat.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.command.SendCommandEvent}.
@@ -1347,7 +1347,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(SendCommandEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.command.TabCompleteCommandEvent}.
@@ -1369,7 +1369,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TabCompleteCommandEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.data.ChangeDataHolderEvent}.
@@ -1385,7 +1385,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeDataHolderEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.data.ChangeDataHolderEvent.ValueChange}.
@@ -1405,7 +1405,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeDataHolderEvent.ValueChange.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.AffectEntityEvent}.
@@ -1427,7 +1427,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(AffectEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.BreedEntityEvent}.
@@ -1447,7 +1447,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(BreedEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.BreedEntityEvent.Breed}.
@@ -1469,7 +1469,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(BreedEntityEvent.Breed.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.BreedEntityEvent.FindMate}.
@@ -1495,7 +1495,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(BreedEntityEvent.FindMate.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityEquipmentEvent}.
@@ -1517,7 +1517,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeEntityEquipmentEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityEquipmentEvent.TargetHuman}.
@@ -1539,7 +1539,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeEntityEquipmentEvent.TargetHuman.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityEquipmentEvent.TargetLiving}.
@@ -1561,7 +1561,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeEntityEquipmentEvent.TargetLiving.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityEquipmentEvent.TargetPlayer}.
@@ -1583,7 +1583,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeEntityEquipmentEvent.TargetPlayer.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityExperienceEvent}.
@@ -1605,7 +1605,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeEntityExperienceEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityPotionEffectEvent}.
@@ -1627,7 +1627,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeEntityPotionEffectEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityPotionEffectEvent.Expire}.
@@ -1649,7 +1649,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeEntityPotionEffectEvent.Expire.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityPotionEffectEvent.Gain}.
@@ -1671,7 +1671,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeEntityPotionEffectEvent.Gain.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ChangeEntityPotionEffectEvent.Remove}.
@@ -1693,7 +1693,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeEntityPotionEffectEvent.Remove.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.CollideEntityEvent}.
@@ -1711,7 +1711,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(CollideEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ConstructEntityEvent}.
@@ -1731,7 +1731,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ConstructEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ConstructEntityEvent.Post}.
@@ -1753,7 +1753,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ConstructEntityEvent.Post.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ConstructEntityEvent.Pre}.
@@ -1773,7 +1773,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ConstructEntityEvent.Pre.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DamageEntityEvent}.
@@ -1805,7 +1805,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DamageEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DestructEntityEvent}.
@@ -1831,7 +1831,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DestructEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DestructEntityEvent.Death}.
@@ -1857,7 +1857,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DestructEntityEvent.Death.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DismountEntityEvent}.
@@ -1875,7 +1875,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DismountEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent}.
@@ -1895,7 +1895,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DisplaceEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Move}.
@@ -1915,7 +1915,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DisplaceEntityEvent.Move.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Move.TargetHuman}.
@@ -1935,7 +1935,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DisplaceEntityEvent.Move.TargetHuman.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Move.TargetLiving}.
@@ -1955,7 +1955,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DisplaceEntityEvent.Move.TargetLiving.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Move.TargetPlayer}.
@@ -1975,7 +1975,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DisplaceEntityEvent.Move.TargetPlayer.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.TargetHuman}.
@@ -1995,7 +1995,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DisplaceEntityEvent.TargetHuman.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.TargetLiving}.
@@ -2015,7 +2015,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DisplaceEntityEvent.TargetLiving.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.TargetPlayer}.
@@ -2035,7 +2035,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DisplaceEntityEvent.TargetPlayer.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Teleport}.
@@ -2061,7 +2061,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DisplaceEntityEvent.Teleport.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Teleport.TargetHuman}.
@@ -2087,7 +2087,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DisplaceEntityEvent.Teleport.TargetHuman.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Teleport.TargetLiving}.
@@ -2113,7 +2113,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DisplaceEntityEvent.Teleport.TargetLiving.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.DisplaceEntityEvent.Teleport.TargetPlayer}.
@@ -2139,7 +2139,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DisplaceEntityEvent.Teleport.TargetPlayer.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ExpireEntityEvent}.
@@ -2157,7 +2157,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ExpireEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.ExpireEntityEvent.TargetItem}.
@@ -2175,7 +2175,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ExpireEntityEvent.TargetItem.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.HarvestEntityEvent}.
@@ -2197,7 +2197,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(HarvestEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.HarvestEntityEvent.TargetHuman}.
@@ -2219,7 +2219,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(HarvestEntityEvent.TargetHuman.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.HarvestEntityEvent.TargetLiving}.
@@ -2241,7 +2241,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(HarvestEntityEvent.TargetLiving.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.HarvestEntityEvent.TargetPlayer}.
@@ -2269,7 +2269,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(HarvestEntityEvent.TargetPlayer.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.HealEntityEvent}.
@@ -2299,7 +2299,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(HealEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.IgniteEntityEvent}.
@@ -2321,7 +2321,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(IgniteEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.InteractEntityEvent}.
@@ -2341,7 +2341,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(InteractEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.InteractEntityEvent.Attack}.
@@ -2365,7 +2365,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(InteractEntityEvent.Attack.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.InteractEntityEvent.Primary}.
@@ -2385,7 +2385,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(InteractEntityEvent.Primary.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.InteractEntityEvent.Secondary}.
@@ -2405,7 +2405,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(InteractEntityEvent.Secondary.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.LeashEntityEvent}.
@@ -2423,7 +2423,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(LeashEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.MountEntityEvent}.
@@ -2441,7 +2441,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(MountEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.SpawnEntityEvent}.
@@ -2459,7 +2459,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(SpawnEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.TameEntityEvent}.
@@ -2477,7 +2477,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TameEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.TargetEntityEvent}.
@@ -2493,7 +2493,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.UnleashEntityEvent}.
@@ -2511,7 +2511,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(UnleashEntityEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.item.AffectItemEvent}.
@@ -2533,7 +2533,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(AffectItemEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.item.ItemMergeItemEvent}.
@@ -2553,7 +2553,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ItemMergeItemEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.item.TargetItemEvent}.
@@ -2569,7 +2569,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetItemEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.TargetLivingEvent}.
@@ -2585,7 +2585,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetLivingEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.ChangeGameModeEvent}.
@@ -2605,7 +2605,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeGameModeEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.ChangeGameModeEvent.TargetHuman}.
@@ -2627,7 +2627,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeGameModeEvent.TargetHuman.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.ChangeGameModeEvent.TargetPlayer}.
@@ -2649,7 +2649,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeGameModeEvent.TargetPlayer.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.ChangeLevelEvent}.
@@ -2669,7 +2669,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeLevelEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.ChangeLevelEvent.TargetHuman}.
@@ -2691,7 +2691,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeLevelEvent.TargetHuman.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.ChangeLevelEvent.TargetPlayer}.
@@ -2713,7 +2713,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeLevelEvent.TargetPlayer.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.human.TargetHumanEvent}.
@@ -2729,7 +2729,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetHumanEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.player.KickPlayerEvent}.
@@ -2755,7 +2755,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(KickPlayerEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.player.ResourcePackStatusEvent}.
@@ -2775,7 +2775,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ResourcePackStatusEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.player.RespawnPlayerEvent}.
@@ -2799,7 +2799,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(RespawnPlayerEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.living.player.TargetPlayerEvent}.
@@ -2815,7 +2815,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetPlayerEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.projectile.LaunchProjectileEvent}.
@@ -2833,7 +2833,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(LaunchProjectileEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.entity.projectile.TargetProjectileEvent}.
@@ -2849,7 +2849,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetProjectileEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameAboutToStartServerEvent}.
@@ -2863,7 +2863,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GameAboutToStartServerEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameConstructionEvent}.
@@ -2877,7 +2877,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GameConstructionEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameInitializationEvent}.
@@ -2891,7 +2891,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GameInitializationEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameLoadCompleteEvent}.
@@ -2905,7 +2905,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GameLoadCompleteEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GamePostInitializationEvent}.
@@ -2919,7 +2919,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GamePostInitializationEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GamePreInitializationEvent}.
@@ -2933,7 +2933,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GamePreInitializationEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameStartedServerEvent}.
@@ -2947,7 +2947,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GameStartedServerEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameStartingServerEvent}.
@@ -2961,7 +2961,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GameStartingServerEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameStateEvent}.
@@ -2975,7 +2975,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GameStateEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameStoppedServerEvent}.
@@ -2989,7 +2989,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GameStoppedServerEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.game.state.GameStoppingServerEvent}.
@@ -3003,7 +3003,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GameStoppingServerEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.AffectItemStackEvent}.
@@ -3023,7 +3023,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(AffectItemStackEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.CraftItemEvent}.
@@ -3045,7 +3045,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(CraftItemEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.DropItemStackEvent}.
@@ -3061,7 +3061,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DropItemStackEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.DropItemStackEvent.Drop}.
@@ -3083,7 +3083,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DropItemStackEvent.Drop.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.DropItemStackEvent.Post}.
@@ -3099,7 +3099,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DropItemStackEvent.Post.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.DropItemStackEvent.Pre}.
@@ -3119,7 +3119,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(DropItemStackEvent.Pre.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.InteractInventoryEvent}.
@@ -3137,7 +3137,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(InteractInventoryEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.InteractInventoryEvent.Click}.
@@ -3155,7 +3155,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(InteractInventoryEvent.Click.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.InteractInventoryEvent.Close}.
@@ -3173,7 +3173,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(InteractInventoryEvent.Close.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.InteractInventoryEvent.Drag}.
@@ -3191,7 +3191,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(InteractInventoryEvent.Drag.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.InteractInventoryEvent.Move}.
@@ -3209,7 +3209,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(InteractInventoryEvent.Move.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.PickUpItemEvent}.
@@ -3233,7 +3233,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(PickUpItemEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.TargetContainerEvent}.
@@ -3249,7 +3249,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetContainerEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.TargetInventoryEvent}.
@@ -3265,7 +3265,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetInventoryEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.UseItemStackEvent}.
@@ -3287,7 +3287,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(UseItemStackEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.UseItemStackEvent.Finish}.
@@ -3311,7 +3311,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(UseItemStackEvent.Finish.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.UseItemStackEvent.Start}.
@@ -3333,7 +3333,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(UseItemStackEvent.Start.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.UseItemStackEvent.Stop}.
@@ -3355,7 +3355,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(UseItemStackEvent.Stop.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.inventory.UseItemStackEvent.Tick}.
@@ -3377,7 +3377,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(UseItemStackEvent.Tick.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.BanIpEvent}.
@@ -3391,7 +3391,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(BanIpEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.ClientConnectionEvent}.
@@ -3405,7 +3405,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ClientConnectionEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.ClientConnectionEvent.Auth}.
@@ -3433,7 +3433,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ClientConnectionEvent.Auth.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.ClientConnectionEvent.Disconnect}.
@@ -3459,7 +3459,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ClientConnectionEvent.Disconnect.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.ClientConnectionEvent.Join}.
@@ -3489,7 +3489,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ClientConnectionEvent.Join.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.ClientConnectionEvent.Login}.
@@ -3517,7 +3517,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ClientConnectionEvent.Login.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.PardonIpEvent}.
@@ -3531,7 +3531,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(PardonIpEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.rcon.RconConnectionEvent}.
@@ -3545,7 +3545,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(RconConnectionEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.rcon.RconConnectionEvent.Connect}.
@@ -3559,7 +3559,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(RconConnectionEvent.Connect.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.rcon.RconConnectionEvent.Disconnect}.
@@ -3573,7 +3573,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(RconConnectionEvent.Disconnect.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.network.rcon.RconConnectionEvent.Login}.
@@ -3587,7 +3587,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(RconConnectionEvent.Login.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.ClientPingServerEvent}.
@@ -3603,7 +3603,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ClientPingServerEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.ClientPingServerEvent.Response}.
@@ -3623,7 +3623,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ClientPingServerEvent.Response.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.ClientPingServerEvent.Response.Players}.
@@ -3641,7 +3641,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ClientPingServerEvent.Response.Players.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.channel.RegisterChannelEvent}.
@@ -3659,7 +3659,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(RegisterChannelEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.channel.TargetChannelEvent}.
@@ -3675,7 +3675,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetChannelEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.channel.UnRegisterChannelEvent}.
@@ -3693,7 +3693,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(UnRegisterChannelEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.query.QueryServerEvent}.
@@ -3705,7 +3705,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(QueryServerEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.query.QueryServerEvent.Basic}.
@@ -3733,7 +3733,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(QueryServerEvent.Basic.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.server.query.QueryServerEvent.Full}.
@@ -3771,7 +3771,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(QueryServerEvent.Full.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.statistic.ChangeStatisticEvent}.
@@ -3793,7 +3793,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeStatisticEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.statistic.ChangeStatisticEvent.TargetPlayer}.
@@ -3817,7 +3817,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeStatisticEvent.TargetPlayer.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.user.BanUserEvent}.
@@ -3835,7 +3835,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(BanUserEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.user.BanUserEvent.TargetPlayer}.
@@ -3857,7 +3857,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(BanUserEvent.TargetPlayer.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.user.PardonUserEvent}.
@@ -3875,7 +3875,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(PardonUserEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.user.PardonUserEvent.TargetPlayer}.
@@ -3897,7 +3897,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(PardonUserEvent.TargetPlayer.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.user.TargetUserEvent}.
@@ -3911,7 +3911,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetUserEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ChangeWorldGameRuleEvent}.
@@ -3935,7 +3935,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeWorldGameRuleEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ChangeWorldWeatherEvent}.
@@ -3963,7 +3963,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ChangeWorldWeatherEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ConstructPortalEvent}.
@@ -3981,7 +3981,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ConstructPortalEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ConstructWorldEvent}.
@@ -4001,7 +4001,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ConstructWorldEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ExplosionEvent}.
@@ -4021,7 +4021,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ExplosionEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ExplosionEvent.Detonate}.
@@ -4047,7 +4047,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ExplosionEvent.Detonate.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ExplosionEvent.Post}.
@@ -4067,7 +4067,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ExplosionEvent.Post.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.ExplosionEvent.Pre}.
@@ -4087,7 +4087,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ExplosionEvent.Pre.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.GenerateChunkEvent}.
@@ -4105,7 +4105,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GenerateChunkEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.GenerateChunkEvent.Post}.
@@ -4123,7 +4123,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GenerateChunkEvent.Post.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.GenerateChunkEvent.Pre}.
@@ -4141,7 +4141,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(GenerateChunkEvent.Pre.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.LoadWorldEvent}.
@@ -4159,7 +4159,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(LoadWorldEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.TargetWorldEvent}.
@@ -4175,7 +4175,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetWorldEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.UnloadWorldEvent}.
@@ -4193,7 +4193,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(UnloadWorldEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.ForcedChunkEvent}.
@@ -4213,7 +4213,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(ForcedChunkEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.LoadChunkEvent}.
@@ -4231,7 +4231,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(LoadChunkEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.PopulateChunkEvent}.
@@ -4249,7 +4249,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(PopulateChunkEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.PopulateChunkEvent.Populate}.
@@ -4267,7 +4267,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(PopulateChunkEvent.Populate.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.PopulateChunkEvent.Post}.
@@ -4285,7 +4285,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(PopulateChunkEvent.Post.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.PopulateChunkEvent.Pre}.
@@ -4305,7 +4305,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(PopulateChunkEvent.Pre.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.TargetChunkEvent}.
@@ -4321,7 +4321,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(TargetChunkEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.UnforcedChunkEvent}.
@@ -4341,7 +4341,7 @@ public class SpongeEventFactory {
         return SpongeEventFactoryUtils.createEventImpl(UnforcedChunkEvent.class, values);
     }
 
-    /**
+    /** 
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
      * {@link org.spongepowered.api.event.world.chunk.UnloadChunkEvent}.

@@ -23,10 +23,11 @@
  * THE SOFTWARE.
  */
 package org.spongepowered.api.data.property;
-
-import com.google.common.base.Optional;
+;
 import org.spongepowered.api.data.Property;
 import org.spongepowered.api.util.Direction;
+
+import java.util.Optional;
 
 public interface DirectionRelativePropertyHolder {
 
