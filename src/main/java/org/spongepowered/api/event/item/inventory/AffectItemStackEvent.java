@@ -22,51 +22,41 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.event.block.tileentity;
+package org.spongepowered.api.event.item.inventory;
 
-import org.spongepowered.api.block.tileentity.carrier.BrewingStand;
 import org.spongepowered.api.event.Cancellable;
 import org.spongepowered.api.event.cause.CauseTracked;
-import org.spongepowered.api.event.item.inventory.AffectItemStackEvent;
+import org.spongepowered.api.item.inventory.Inventory;
 import org.spongepowered.api.item.inventory.ItemStack;
-import org.spongepowered.api.item.inventory.ItemStackSnapshot;
+import org.spongepowered.api.item.inventory.ItemStackTransaction;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
- * Fires during the brewing process where {@link ItemStack}s are brewed into different {@link ItemStack}s
- * based on an ingredient which is also an {@link ItemStack} within a {@link BrewingStand}.
+ * Fired when {@link ItemStack}s are generated into a {@link Inventory}
  */
-public interface BrewingEvent extends TargetTileEntityEvent, CauseTracked {
-
-    @Override
-    BrewingStand getTargetTile();
+public interface AffectItemStackEvent extends TargetInventoryEvent, Cancellable, CauseTracked {
 
     /**
-     * @return The ingredient
+     * Gets a list of the {@link ItemStackTransaction}s for this event. If a
+     * transaction is requested to be marked as "invalid",
+     * {@link ItemStackTransaction#setIsValid(boolean)} can be used.
+     *
+     * @return The unmodifiable list of transactions
      */
-    ItemStackSnapshot getIngredient();
+    List<ItemStackTransaction> getTransactions();
 
-    interface Start extends BrewingEvent, AffectItemStackEvent, Cancellable {}
+    /**
+     * Applies the provided {@link Predicate} to the {@link List} of
+     * {@link ItemStackTransaction}s from {@link #getTransactions()} such that
+     * any time that {@link Predicate#apply(Object)} returns <code>false</code>
+     * on a {@link ItemStackTransaction}, the {@link ItemStackTransaction} is
+     * marked as "invalid" and will not apply post event.
+     *
+     * @param predicate The predicate to use for filtering
+     * @return The filtered transactions
+     */
+    List<ItemStackTransaction> filter(Predicate<ItemStack> predicate);
 
-    interface Tick extends BrewingEvent, AffectItemStackEvent, Cancellable {}
-
-    interface Interrupt extends BrewingEvent {
-        /**
-         * Gets an immutable {@link List} of {@link ItemStackSnapshot}s that are the result
-         * of the brew.
-         * @return The brewed items
-         */
-        List<ItemStackSnapshot> getBrewedItemStacks();
-    }
-
-    interface Finish extends BrewingEvent {
-
-        /**
-         * Gets an immutable {@link List} of {@link ItemStackSnapshot}s that are the result
-         * of the brew.
-         * @return The brewed items
-         */
-        List<ItemStackSnapshot> getBrewedItemStacks();
-    }
 }

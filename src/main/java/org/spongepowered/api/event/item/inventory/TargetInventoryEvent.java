@@ -22,17 +22,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.event.inventory;
+package org.spongepowered.api.event.item.inventory;
 
 import org.spongepowered.api.event.GameEvent;
-import org.spongepowered.api.item.inventory.Container;
+import org.spongepowered.api.item.inventory.Inventory;
 
 /**
- * Base event for all events with an {@link Container} as the target.
+ * Base event for all events with an {@link Inventory} as the target.
  */
-public interface TargetContainerEvent extends GameEvent {
+public interface TargetInventoryEvent extends GameEvent {
+
     /**
-     * @return The target {@link Container}
+     * @return The target {@link Inventory}
      */
-    Container getTargetContainer();
+    Inventory getTargetInventory();
+
 }

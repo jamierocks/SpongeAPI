@@ -80,7 +80,7 @@ genEventImpl {
     eventImplCreateMethod = "org.spongepowered.api.event.SpongeEventFactoryUtils.createEventImpl"
     sortPriorityPrefix = "original"
     groupingPrefixes = ['from': 'to']
-    validateCode = true
+    validateCode = false
 }
 
 task sourceJar(type: Jar) {

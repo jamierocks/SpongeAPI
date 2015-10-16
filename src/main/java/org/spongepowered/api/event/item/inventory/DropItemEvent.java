@@ -22,15 +22,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.event.inventory;
+package org.spongepowered.api.event.item.inventory;
 
 import org.spongepowered.api.block.BlockType;
 import org.spongepowered.api.entity.Entity;
 import org.spongepowered.api.entity.Item;
 import org.spongepowered.api.entity.living.player.Player;
-import org.spongepowered.api.event.Cancellable;
-import org.spongepowered.api.event.GameEvent;
-import org.spongepowered.api.event.cause.CauseTracked;
 import org.spongepowered.api.event.entity.SpawnEntityEvent;
 import org.spongepowered.api.item.inventory.Container;
 import org.spongepowered.api.item.inventory.Inventory;
@@ -41,7 +38,7 @@ import org.spongepowered.api.item.inventory.ItemStack;
  * "dropped" onto the ground. This will happen before they are physically 
  * dropped, let alone spawned.
  */
-public interface DropItemEvent extends SpawnEntityEvent, GameEvent, Cancellable, CauseTracked {
+public interface DropItemEvent extends SpawnEntityEvent {
 
     /**
      * Called when one or more {@link Item} drops are triggered by an 

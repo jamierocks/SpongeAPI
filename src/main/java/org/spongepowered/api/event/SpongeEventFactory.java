@@ -131,14 +131,14 @@ import org.spongepowered.api.event.game.state.GameStartingServerEvent;
 import org.spongepowered.api.event.game.state.GameStateEvent;
 import org.spongepowered.api.event.game.state.GameStoppedServerEvent;
 import org.spongepowered.api.event.game.state.GameStoppingServerEvent;
-import org.spongepowered.api.event.inventory.AffectItemStackEvent;
-import org.spongepowered.api.event.inventory.ChangeInventoryEvent;
-import org.spongepowered.api.event.inventory.CraftItemEvent;
-import org.spongepowered.api.event.inventory.DropItemEvent;
-import org.spongepowered.api.event.inventory.InteractInventoryEvent;
-import org.spongepowered.api.event.inventory.TargetContainerEvent;
-import org.spongepowered.api.event.inventory.TargetInventoryEvent;
-import org.spongepowered.api.event.inventory.UseItemStackEvent;
+import org.spongepowered.api.event.item.inventory.AffectItemStackEvent;
+import org.spongepowered.api.event.item.inventory.ChangeInventoryEvent;
+import org.spongepowered.api.event.item.inventory.CraftItemStackEvent;
+import org.spongepowered.api.event.item.inventory.DropItemEvent;
+import org.spongepowered.api.event.item.inventory.InteractInventoryEvent;
+import org.spongepowered.api.event.item.inventory.TargetContainerEvent;
+import org.spongepowered.api.event.item.inventory.TargetInventoryEvent;
+import org.spongepowered.api.event.item.inventory.UseItemStackEvent;
 import org.spongepowered.api.event.network.BanIpEvent;
 import org.spongepowered.api.event.network.ChannelRegistrationEvent;
 import org.spongepowered.api.event.network.ClientConnectionEvent;
@@ -3062,7 +3062,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.AffectItemStackEvent}.
+     * {@link AffectItemStackEvent}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3082,7 +3082,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.ChangeInventoryEvent}.
+     * {@link ChangeInventoryEvent}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3104,7 +3104,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.ChangeInventoryEvent.Click}.
+     * {@link ChangeInventoryEvent.Click}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3126,7 +3126,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.ChangeInventoryEvent.Drag}.
+     * {@link ChangeInventoryEvent.Drag}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3148,7 +3148,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.ChangeInventoryEvent.Equipment}.
+     * {@link ChangeInventoryEvent.Equipment}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3170,7 +3170,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.ChangeInventoryEvent.Held}.
+     * {@link ChangeInventoryEvent.Held}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3192,7 +3192,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.ChangeInventoryEvent.Move}.
+     * {@link ChangeInventoryEvent.Move}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3214,7 +3214,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.CraftItemEvent}.
+     * {@link CraftItemStackEvent}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3223,20 +3223,20 @@ public class SpongeEventFactory {
      * @param transactions The transactions
      * @return A new craft item event
      */
-    public static CraftItemEvent createCraftItemEvent(Game game, Cause cause, Recipe recipe, CraftingInventory targetInventory, List<ItemStackTransaction> transactions) {
+    public static CraftItemStackEvent createCraftItemEvent(Game game, Cause cause, Recipe recipe, CraftingInventory targetInventory, List<ItemStackTransaction> transactions) {
         Map<String, Object> values = Maps.newHashMap();
         values.put("game", game);
         values.put("cause", cause);
         values.put("recipe", recipe);
         values.put("targetInventory", targetInventory);
         values.put("transactions", transactions);
-        return SpongeEventFactoryUtils.createEventImpl(CraftItemEvent.class, values);
+        return SpongeEventFactoryUtils.createEventImpl(CraftItemStackEvent.class, values);
     }
 
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.DropItemEvent}.
+     * {@link DropItemEvent}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3258,7 +3258,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.DropItemEvent.Custom}.
+     * {@link DropItemEvent.Custom}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3280,7 +3280,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.DropItemEvent.Destruct}.
+     * {@link DropItemEvent.Destruct}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3302,7 +3302,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.DropItemEvent.Dispense}.
+     * {@link DropItemEvent.Dispense}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3324,7 +3324,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.InteractInventoryEvent}.
+     * {@link InteractInventoryEvent}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3342,7 +3342,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.InteractInventoryEvent.Close}.
+     * {@link InteractInventoryEvent.Close}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3360,7 +3360,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.InteractInventoryEvent.Open}.
+     * {@link InteractInventoryEvent.Open}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3378,7 +3378,25 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.TargetContainerEvent}.
+     * {@link InteractInventoryEvent.Select}.
+     * 
+     * @param game The game
+     * @param cause The cause
+     * @param targetInventory The target inventory
+     * @return A new select interact inventory event
+     */
+    public static InteractInventoryEvent.Select createInteractInventoryEventSelect(Game game, Cause cause, Slot targetInventory) {
+        Map<String, Object> values = Maps.newHashMap();
+        values.put("game", game);
+        values.put("cause", cause);
+        values.put("targetInventory", targetInventory);
+        return SpongeEventFactoryUtils.createEventImpl(InteractInventoryEvent.Select.class, values);
+    }
+
+    /**
+     * AUTOMATICALLY GENERATED, DO NOT EDIT.
+     * Creates a new instance of
+     * {@link TargetContainerEvent}.
      * 
      * @param game The game
      * @param targetContainer The target container
@@ -3394,7 +3412,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.TargetInventoryEvent}.
+     * {@link TargetInventoryEvent}.
      * 
      * @param game The game
      * @param targetInventory The target inventory
@@ -3410,7 +3428,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.UseItemStackEvent}.
+     * {@link UseItemStackEvent}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3432,7 +3450,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.UseItemStackEvent.Finish}.
+     * {@link UseItemStackEvent.Finish}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3456,7 +3474,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.UseItemStackEvent.Start}.
+     * {@link UseItemStackEvent.Start}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3478,7 +3496,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.UseItemStackEvent.Stop}.
+     * {@link UseItemStackEvent.Stop}.
      * 
      * @param game The game
      * @param cause The cause
@@ -3500,7 +3518,7 @@ public class SpongeEventFactory {
     /**
      * AUTOMATICALLY GENERATED, DO NOT EDIT.
      * Creates a new instance of
-     * {@link org.spongepowered.api.event.inventory.UseItemStackEvent.Tick}.
+     * {@link UseItemStackEvent.Tick}.
      * 
      * @param game The game
      * @param cause The cause

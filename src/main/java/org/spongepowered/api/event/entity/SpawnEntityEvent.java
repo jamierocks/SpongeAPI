@@ -25,9 +25,7 @@
 package org.spongepowered.api.event.entity;
 
 import org.spongepowered.api.entity.Entity;
-import org.spongepowered.api.event.Cancellable;
 import org.spongepowered.api.event.cause.Cause;
-import org.spongepowered.api.event.cause.CauseTracked;
 import org.spongepowered.api.event.network.ClientConnectionEvent;
 
 /**
@@ -42,7 +40,7 @@ import org.spongepowered.api.event.network.ClientConnectionEvent;
  * joined the world. {@link ClientConnectionEvent} is the
  * reccomended event to interact with connecting players.</p>
  */
-public interface SpawnEntityEvent extends AffectEntityEvent, Cancellable, CauseTracked {
+public interface SpawnEntityEvent extends AffectEntityEvent {
 
     interface ChunkLoad extends SpawnEntityEvent {}
 

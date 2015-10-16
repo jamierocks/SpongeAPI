@@ -22,8 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.event.inventory;
+package org.spongepowered.api.event.item.inventory;
 
+import org.spongepowered.api.entity.living.Living;
 import org.spongepowered.api.event.cause.Cause;
 import org.spongepowered.api.item.inventory.*;
 
@@ -64,8 +65,12 @@ public interface ChangeInventoryEvent extends InteractInventoryEvent {
         Slot getTargetInventory();
     }
 
+    /**
+     * Fired when a {@link Living} changes it's held {@link ItemStack}.
+     */
     interface Held extends ChangeInventoryEvent {
         @Override
         Slot getTargetInventory();
     }
+
 }

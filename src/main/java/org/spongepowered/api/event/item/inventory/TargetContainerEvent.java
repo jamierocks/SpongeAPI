@@ -22,28 +22,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.event.inventory;
+package org.spongepowered.api.event.item.inventory;
 
-import org.spongepowered.api.event.Cancellable;
-import org.spongepowered.api.event.cause.CauseTracked;
-import org.spongepowered.api.item.inventory.ItemStack;
-import org.spongepowered.api.item.inventory.crafting.CraftingInventory;
-import org.spongepowered.api.item.recipe.Recipe;
+import org.spongepowered.api.event.GameEvent;
+import org.spongepowered.api.item.inventory.Container;
 
 /**
- * Fired when {@link ItemStack}s are crafted from a {@link Recipe} into a {@link CraftingInventory}.
+ * Base event for all events with an {@link Container} as the target.
  */
-public interface CraftItemEvent extends AffectItemStackEvent, Cancellable, CauseTracked {
-
+public interface TargetContainerEvent extends GameEvent {
     /**
-     * @return The crafting inventory
+     * @return The target {@link Container}
      */
-    @Override
-    CraftingInventory getTargetInventory();
-
-    /**
-     * @return The {@link Recipe}
-     */
-    Recipe getRecipe();
-
+    Container getTargetContainer();
 }

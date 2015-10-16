@@ -22,41 +22,33 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.event.inventory;
+package org.spongepowered.api.event.item.inventory;
 
+import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.event.Cancellable;
 import org.spongepowered.api.event.cause.CauseTracked;
-import org.spongepowered.api.item.inventory.Inventory;
 import org.spongepowered.api.item.inventory.ItemStack;
-import org.spongepowered.api.item.inventory.ItemStackTransaction;
+import org.spongepowered.api.item.inventory.Slot;
+import org.spongepowered.api.item.inventory.entity.Hotbar;
 
-import java.util.List;
-import java.util.function.Predicate;
+public interface InteractInventoryEvent extends TargetInventoryEvent, Cancellable, CauseTracked {
 
-/**
- * Fired when {@link ItemStack}s are generated into a {@link Inventory}
- */
-public interface AffectItemStackEvent extends TargetInventoryEvent, Cancellable, CauseTracked {
+    interface Open extends InteractInventoryEvent {}
 
-    /**
-     * Gets a list of the {@link ItemStackTransaction}s for this event. If a
-     * transaction is requested to be marked as "invalid",
-     * {@link ItemStackTransaction#setIsValid(boolean)} can be used.
-     *
-     * @return The unmodifiable list of transactions
-     */
-    List<ItemStackTransaction> getTransactions();
+    interface Close extends InteractInventoryEvent {}
 
     /**
-     * Applies the provided {@link Predicate} to the {@link List} of
-     * {@link ItemStackTransaction}s from {@link #getTransactions()} such that
-     * any time that {@link Predicate#apply(Object)} returns <code>false</code>
-     * on a {@link ItemStackTransaction}, the {@link ItemStackTransaction} is
-     * marked as "invalid" and will not apply post event.
+     * Fired when a {@link Player} selects a {@link Slot} on their {@link Hotbar} as the selected
+     * slot.
      *
-     * @param predicate The predicate to use for filtering
-     * @return The filtered transactions
+     * This isn't to be confused with {@link ChangeInventoryEvent.Held} as this is simply the first
+     * link in the chain. If a {@link Player} changes their {@link Slot} currently selected in their
+     * {@link Hotbar}, this is fired. If a {@link Player} simply changes the {@link ItemStack} in their
+     * selected slot, it would fire {@link ChangeInventoryEvent.Held} as expected.
      */
-    List<ItemStackTransaction> filter(Predicate<ItemStack> predicate);
+    interface Select extends InteractInventoryEvent {
+        @Override
+        Slot getTargetInventory();
+    }
 
 }
