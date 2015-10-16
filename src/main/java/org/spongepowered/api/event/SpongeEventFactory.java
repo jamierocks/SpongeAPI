@@ -27,6 +27,11 @@ package org.spongepowered.api.event;
 import com.flowpowered.math.vector.Vector3d;
 import com.flowpowered.math.vector.Vector3i;
 import com.google.common.collect.Maps;
+import java.net.InetSocketAddress;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.function.Function;
 import org.spongepowered.api.Game;
 import org.spongepowered.api.GameProfile;
 import org.spongepowered.api.GameState;
@@ -192,12 +197,6 @@ import org.spongepowered.api.world.gen.Populator;
 import org.spongepowered.api.world.gen.PopulatorType;
 import org.spongepowered.api.world.storage.WorldProperties;
 import org.spongepowered.api.world.weather.Weather;
-
-import java.net.InetSocketAddress;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.function.Function;
 
 public class SpongeEventFactory {
     /**
@@ -558,15 +557,17 @@ public class SpongeEventFactory {
      * @param bed The bed
      * @param spawnTransform The spawn transform
      * @param targetEntity The target entity
+     * @param spawnSet The spawn set
      * @return A new post sleeping event
      */
-    public static SleepingEvent.Post createSleepingEventPost(Game game, Cause cause, BlockSnapshot bed, Optional<Transform<World>> spawnTransform, Entity targetEntity) {
+    public static SleepingEvent.Post createSleepingEventPost(Game game, Cause cause, BlockSnapshot bed, Optional<Transform<World>> spawnTransform, Entity targetEntity, boolean spawnSet) {
         Map<String, Object> values = Maps.newHashMap();
         values.put("game", game);
         values.put("cause", cause);
         values.put("bed", bed);
         values.put("spawnTransform", spawnTransform);
         values.put("targetEntity", targetEntity);
+        values.put("spawnSet", spawnSet);
         return SpongeEventFactoryUtils.createEventImpl(SleepingEvent.Post.class, values);
     }
 
@@ -1374,15 +1375,13 @@ public class SpongeEventFactory {
      * {@link org.spongepowered.api.event.data.ChangeDataHolderEvent.ValueChange}.
      * 
      * @param game The game
-     * @param endResult The end result
      * @param originalChanges The original changes
      * @param targetHolder The target holder
      * @return A new value change change data holder event
      */
-    public static ChangeDataHolderEvent.ValueChange createChangeDataHolderEventValueChange(Game game, DataTransactionResult endResult, DataTransactionResult originalChanges, DataHolder targetHolder) {
+    public static ChangeDataHolderEvent.ValueChange createChangeDataHolderEventValueChange(Game game, DataTransactionResult originalChanges, DataHolder targetHolder) {
         Map<String, Object> values = Maps.newHashMap();
         values.put("game", game);
-        values.put("endResult", endResult);
         values.put("originalChanges", originalChanges);
         values.put("targetHolder", targetHolder);
         return SpongeEventFactoryUtils.createEventImpl(ChangeDataHolderEvent.ValueChange.class, values);
@@ -1763,27 +1762,17 @@ public class SpongeEventFactory {
      * 
      * @param game The game
      * @param cause The cause
-     * @param originalFinalDamage The original final damage
-     * @param finalDamage The final damage
-     * @param modifiers The modifiers
-     * @param originalDamages The original damages
      * @param originalFunctions The original functions
      * @param targetEntity The target entity
-     * @param baseDamage The base damage
      * @param originalDamage The original damage
      * @return A new damage entity event
      */
-    public static DamageEntityEvent createDamageEntityEvent(Game game, Cause cause, double originalFinalDamage, double finalDamage, List<Tuple<DamageModifier, Function<? super Double, Double>>> modifiers, Map<DamageModifier, Double> originalDamages, List<Tuple<DamageModifier, Function<? super Double, Double>>> originalFunctions, Entity targetEntity, double baseDamage, double originalDamage) {
+    public static DamageEntityEvent createDamageEntityEvent(Game game, Cause cause, List<Tuple<DamageModifier, Function<? super Double, Double>>> originalFunctions, Entity targetEntity, double originalDamage) {
         Map<String, Object> values = Maps.newHashMap();
         values.put("game", game);
         values.put("cause", cause);
-        values.put("originalFinalDamage", originalFinalDamage);
-        values.put("finalDamage", finalDamage);
-        values.put("modifiers", modifiers);
-        values.put("originalDamages", originalDamages);
         values.put("originalFunctions", originalFunctions);
         values.put("targetEntity", targetEntity);
-        values.put("baseDamage", baseDamage);
         values.put("originalDamage", originalDamage);
         return SpongeEventFactoryUtils.createEventImpl(DamageEntityEvent.class, values);
     }
@@ -2259,25 +2248,17 @@ public class SpongeEventFactory {
      * 
      * @param game The game
      * @param cause The cause
-     * @param modifiers The modifiers
      * @param originalFunctions The original functions
-     * @param originalHealingAmounts The original healing amounts
      * @param targetEntity The target entity
-     * @param baseHealAmount The base heal amount
-     * @param finalHealAmount The final heal amount
      * @param originalHealAmount The original heal amount
      * @return A new heal entity event
      */
-    public static HealEntityEvent createHealEntityEvent(Game game, Cause cause, List<Tuple<HealthModifier, Function<? super Double, Double>>> modifiers, List<Tuple<HealthModifier, Function<? super Double, Double>>> originalFunctions, Map<HealthModifier, Double> originalHealingAmounts, Entity targetEntity, double baseHealAmount, double finalHealAmount, double originalHealAmount) {
+    public static HealEntityEvent createHealEntityEvent(Game game, Cause cause, List<Tuple<HealthModifier, Function<? super Double, Double>>> originalFunctions, Entity targetEntity, double originalHealAmount) {
         Map<String, Object> values = Maps.newHashMap();
         values.put("game", game);
         values.put("cause", cause);
-        values.put("modifiers", modifiers);
         values.put("originalFunctions", originalFunctions);
-        values.put("originalHealingAmounts", originalHealingAmounts);
         values.put("targetEntity", targetEntity);
-        values.put("baseHealAmount", baseHealAmount);
-        values.put("finalHealAmount", finalHealAmount);
         values.put("originalHealAmount", originalHealAmount);
         return SpongeEventFactoryUtils.createEventImpl(HealEntityEvent.class, values);
     }
@@ -2322,30 +2303,6 @@ public class SpongeEventFactory {
         values.put("interactionPoint", interactionPoint);
         values.put("targetEntity", targetEntity);
         return SpongeEventFactoryUtils.createEventImpl(InteractEntityEvent.class, values);
-    }
-
-    /**
-     * AUTOMATICALLY GENERATED, DO NOT EDIT.
-     * Creates a new instance of
-     * {@link org.spongepowered.api.event.entity.InteractEntityEvent.Attack}.
-     * 
-     * @param game The game
-     * @param cause The cause
-     * @param interactionPoint The interaction point
-     * @param originalFunctions The original functions
-     * @param targetEntity The target entity
-     * @param originalDamage The original damage
-     * @return A new attack interact entity event
-     */
-    public static InteractEntityEvent.Attack createInteractEntityEventAttack(Game game, Cause cause, Optional<Vector3d> interactionPoint, List<Tuple<DamageModifier, Function<? super Double, Double>>> originalFunctions, Entity targetEntity, double originalDamage) {
-        Map<String, Object> values = Maps.newHashMap();
-        values.put("game", game);
-        values.put("cause", cause);
-        values.put("interactionPoint", interactionPoint);
-        values.put("originalFunctions", originalFunctions);
-        values.put("targetEntity", targetEntity);
-        values.put("originalDamage", originalDamage);
-        return SpongeEventFactoryUtils.createEventImpl(InteractEntityEvent.Attack.class, values);
     }
 
     /**
